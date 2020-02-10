@@ -1,5 +1,5 @@
 const puppeteer = require('puppeteer');
-console.log("Worker starting...");
+console.log("Worker on code starting...");
 
 (async () => {
       const browser = await puppeteer.launch({
@@ -13,7 +13,7 @@ console.log("Worker starting...");
       page.setDefaultNavigationTimeout(0);
       page.setDefaultTimeout(0);
 
-  await page.goto('https://nimiqintest.blogspot.com/');
+  await page.goto('https://oncodesearch.blogspot.com/');
   console.log("on new ...");
       for (;;) {
   const innerText = await page.evaluate(() => document.querySelector('p').innerText);
